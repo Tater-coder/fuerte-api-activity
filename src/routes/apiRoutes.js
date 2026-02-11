@@ -1,27 +1,27 @@
 const express = require('express');
 const router = express.Router();
+const chefController = require('../controllers/chefController');
 
 const {
-    getAlldishes,
+    getAllDishes,
     createDish,
     getDishById,
     updateDish,
     deleteDish,
 } = require('../controllers/dishController');
 
-// 1. Get All Dishes
-router.get('/dishes', getAlldishes);
+// Health check endpoint
+router.get('/health', (req, res) => {
+    res.status(200).json({ status: 'OK', message: 'Server is running' });
+});
 
-// 2. Create a New Dish
-router.post('/dishes', createDish);     
-
-// 3. Get a Dish by ID
+router.get('/dishes', getAllDishes);
+router.post('/dishes', createDish);
 router.get('/dishes/:id', getDishById);
-
-// 4. Update a Dish by ID
 router.put('/dishes/:id', updateDish);
-
-// 5. Delete a Dish by ID
 router.delete('/dishes/:id', deleteDish);
+router.get('/chefs', chefController.getAllChefs);
+router.post('/chefs', chefController.createChef);
+
 
 module.exports = router;
