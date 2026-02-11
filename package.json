@@ -1,21 +1,8 @@
 {
-<<<<<<< HEAD
-  "dependencies": {
-    "cors": "^2.8.6",
-    "dotenv": "^17.2.3",
-    "express": "^5.2.1",
-    "mongoose": "^9.1.5"
-  },
-  "name": "fuerte-api-activity",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-=======
   "name": "fuerte-api-activity",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
->>>>>>> ce62fd17a920762a782d9b5b99cb1b56be496c09
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
@@ -25,14 +12,12 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-<<<<<<< HEAD
-=======
   "dependencies": {
     "cors": "^2.8.6",
     "dotenv": "^17.2.3",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mongoose": "^9.1.5"
   },
->>>>>>> ce62fd17a920762a782d9b5b99cb1b56be496c09
   "devDependencies": {
     "nodemon": "^3.1.11"
   }
