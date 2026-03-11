@@ -19,7 +19,3 @@ Returning 404 Not Found clearly tells the client that the requested resource doe
 17. - (Paste a screenshot of a successful GET request here)
 
 ![alt text](image.png)
-**"Why did I choose to Embed the [Review/Tag/Log]?"**
-- Since the [Review/Tag/Log] is closely related to the parent item and does not require its own existence, I decided to integrate it. Related data is kept together by embedding, which speeds up readings, streamlines queries, and eliminates the need for joins or several lookups. Embedding the [Review/Tag/Log] enhances performance and maintains the data model simpler to comprehend and maintain because it is mainly accessible inside the context of its parent and has a limited scope and lifecycle.
-**"Why did I choose to Reference the [Chef/User/Guest]?"**
-- Since this item must exist independently and is shared across several system components, I decided to make reference to the [Chef/User/Guest]. Referencing promotes consistency and prevents data duplication when the same [Chef/User/Guest] is linked to many records. Because modifications to a [Chef/User/Guest] only need to be made once, they will be mirrored everywhere it is used, making updates safer and more scalable.

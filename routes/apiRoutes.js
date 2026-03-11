@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const rooms = require('../models/roomModels');
+const rooms = require('../src/models/roomModels');
 
 //Get
 router.get('/rooms', (req, res) => {
