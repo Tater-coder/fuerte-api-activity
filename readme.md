@@ -19,3 +19,23 @@ Returning 404 Not Found clearly tells the client that the requested resource doe
 17. - (Paste a screenshot of a successful GET request here)
 
 ![alt text](image.png)
+
+1. Authentication vs Authorization:
+
+ Question: What is the difference between Authentication and Authorization in our 
+code?
+
+Answer: The process of confirming a user's identification is known as authentication, and it typically involves determining whether the password and email address they entered match the information in the database when they log in. Conversely, authorization establishes what the authenticated user is permitted to do within the system. Authorization verifies a user's permissions after they log in before granting them access to resources or routes that are protected.
+
+2. Security (bcrypt):
+Question: Why did we use bcryptjs instead of saving passwords as plain text in 
+MongoDB?
+
+Answer: We implemented bcryptjs to hash passwords prior to saving them in MongoDB to enhance security. Storing passwords in plain text would allow anyone with access to the database to easily view all user passwords. By utilizing bcryptjs for password hashing, the original password cannot be directly accessed, which aids in safeguarding user accounts even if the database is breached.
+
+3. JWT Structure:
+ Question: What does the protect middleware do when it receives a JWT from the 
+client?
+
+Answer: The protect middleware verifies the JWT sent by the client to ensure it is valid and not tampered with. It decodes the token, retrieves the user ID from it, and then checks the database to confirm that the user exists.
+If the token is valid, the middleware allows access to the protected route. If the token is missing or invalid, it denies access and returns an unauthorized error.

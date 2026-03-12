@@ -8,6 +8,7 @@ const getAllChefs = async (req, res) => {
     }
 };
 
+// 2. Create a dish
 const createChef = async (req, res) => {
     try {
         const newChef = await Chef.create(req.body);
